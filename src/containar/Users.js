@@ -1,16 +1,21 @@
-import {useState} from "react";
+import {useInsertionEffect, useState} from "react";
 function Users(){
-    const [users,setUser]= useState(
-        [
-            {name:"jay",age:21},
-            {name : "vinay", age:25}
-
-        ]
-    );
+    const [users,setUser]= useState([]);
+    useInsertionEffect(()=>{
+        fetch('https://jsonplaceholder.typicode.com/users').then(Response=>Response.json()).then(data=>{
+            setUser(data)
+        })
+    })
     return(
         <div>
             <h1>Users</h1>
-            <h2>{users.name}</h2>
+            <ul>{
+             
+                  users.map((user,index) =>{
+                    return <li key = {index}>{user.name},{user.email}</li>
+                  })
+                }
+            </ul>
         </div>
     )
 }
