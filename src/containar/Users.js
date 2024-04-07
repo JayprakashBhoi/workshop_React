@@ -1,4 +1,4 @@
-import {userState} from "react";
+import {useState} from "react";
 function Users(){
     const [users,setUser]=userState(
         [
