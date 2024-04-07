@@ -18,7 +18,7 @@ function App(){
         </ul>
       </nav>
       <div className="container">
-        <Routes class>
+        <Routes>
         <Route path ="/"element = {<Jsx/>}></Route>
         <Route path ="/binding" element = {<DataBuinding/>}></Route>
         <Route path ="/users" element={<Users/>}></Route>
