@@ -1,4 +1,4 @@
-import React,{userState} from "react";
+import {userState} from "react";
 function Users(){
     const [users,setUser]=userState(
         [
@@ -7,5 +7,11 @@ function Users(){
 
         ]
     );
+    return(
+        <div>
+            <h1>Users</h1>
+            <h2>{users.name}</h2>
+        </div>
+    )
 }
 export default Users;
