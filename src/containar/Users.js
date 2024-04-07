@@ -1,6 +1,6 @@
 import {useState} from "react";
 function Users(){
-    const [users,setUser]=userState(
+    const [users,setUser]= useState(
         [
             {name:"jay",age:21},
             {name : "vinay", age:25}
